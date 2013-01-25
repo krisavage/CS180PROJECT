@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Scotty Talk</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_display_message">Output</string>
+    <string name="title_activity_menu_">Menu_Activity</string>
+    <string name="title_activity_sms">SMSActivity</string>
+
+</resources>
