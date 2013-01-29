@@ -36,12 +36,22 @@
         	<meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ucr.ScottyTalk.MainActivity" />
+        	
         </activity>
+        <activity
+            android:name="com.ucr.scottytalk.login"
+            android:label="login">
+        		<meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ucr.ScottyTalk.MainActivity" />
+            </activity>
     </application>
 
     <uses-permission android:name="android.permission.SEND_SMS" >
     </uses-permission>
     <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
+     <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
 
 </manifest>

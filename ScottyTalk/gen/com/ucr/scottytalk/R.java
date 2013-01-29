@@ -14,17 +14,23 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int btnSendSMS=0x7f070003;
+        public static final int btnSendSMS=0x7f070005;
         public static final int button1=0x7f070000;
-        public static final int displayMessages=0x7f070004;
-        public static final int menu_settings=0x7f070005;
-        public static final int txtMessage=0x7f070002;
-        public static final int txtPhoneNo=0x7f070001;
+        public static final int button2=0x7f070001;
+        public static final int button3=0x7f070002;
+        public static final int displayMessages=0x7f070006;
+        public static final int editText1=0x7f070007;
+        public static final int editText2=0x7f070008;
+        public static final int loginbutton=0x7f070009;
+        public static final int menu_settings=0x7f07000a;
+        public static final int txtMessage=0x7f070004;
+        public static final int txtPhoneNo=0x7f070003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_sms=0x7f030001;
-        public static final int message=0x7f030002;
+        public static final int login=0x7f030002;
+        public static final int message=0x7f030003;
     }
     public static final class menu {
         public static final int activity_display_message=0x7f060000;

@@ -30,4 +30,8 @@ public class MainActivity extends Activity {
     	startActivity (intent);
     }
 
+    public void loginScreen(View view) {
+    	Intent intent = new Intent (this, login.class);
+    	startActivity (intent);
+    }
 }
