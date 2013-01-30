@@ -7,5 +7,7 @@
     <string name="title_activity_display_message">Output</string>
     <string name="title_activity_menu_">Menu_Activity</string>
     <string name="title_activity_sms">SMSActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_log_in">LogIn</string>
 
 </resources>

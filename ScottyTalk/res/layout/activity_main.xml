@@ -6,40 +6,22 @@
     tools:context=".Menu_Activity" >
 
     <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="outputMessage"
-        android:text="SMS"
-        android:textColor="#FFF" />
-
-    <Button
         android:id="@+id/button1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="110dp"
-        android:text="Video Chat"
-        android:textColor="#FFF" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="54dp"
-        android:text="MMS"
-        android:textColor="#FFF" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/button1"
-        android:onClick="loginScreen"
+        android:onClick="menu"
         android:text="Log In"
         android:textColor="#FFF" />
-    
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button1"
+        android:onClick = "register"
+        android:text="Register"
+        android:textColor="#FFF" />
+
 </RelativeLayout>

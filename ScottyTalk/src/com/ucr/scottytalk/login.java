@@ -11,6 +11,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.*;
+
 import java.io.*;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ import java.net.HttpURLConnection;
 import android.util.Log;
 import android.os.AsyncTask;
 
-public class login extends Activity{
+public class LogIn extends Activity{
 	
 	Button loginbutton;
 	
@@ -38,27 +39,22 @@ public class login extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
     	Intent intent = getIntent ();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_log_in);
         
         Log.e("debugger", "Created!");
         
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
         	getActionBar ().setDisplayHomeAsUpEnabled(true);
         }
-        
-        loginbutton = (Button) findViewById (R.id.loginbutton);
-        
-        //Listen to the send button. Check if the send button was pressed.
-        loginbutton.setOnClickListener(new View.OnClickListener() 
-        {
-
-			@Override
-			public void onClick(View arg0) 
-			{
-				new LoginUser().execute();
-			}
-        });
     }
+    
+    public void LoggedInMenu(View view){
+    	//Uncomment Once we are able to login
+    	//new LoginUser().execute(); 
+    	Intent intent = new Intent (this, MenuActivity.class); 
+    	startActivity (intent);
+    }
+
 }
 			
 class LoginUser extends AsyncTask<String, String, String> {

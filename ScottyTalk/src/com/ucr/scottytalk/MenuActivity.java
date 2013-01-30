@@ -7,14 +7,14 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
-public class MainActivity extends Activity {
+public class MenuActivity extends Activity {
 	
 	public final static String EXTRA_MESSAGE = "com.ucr.scottytalk.MESSAGE";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_menu);
 	}
 
 	@Override
@@ -24,19 +24,10 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	//Function that handles the Login button
-    public void menu(View view){
-    	Intent intent = new Intent (this, LogIn.class); 
+	//Function that handles the SMS button
+    public void outputMessage(View view){
+    	Intent intent = new Intent (this, SMSActivity.class); 
     	startActivity (intent);
     }
-
-    /* 
-	//Function that handles the Register button
-	 * Uncomment once Register page has been created
-    public void register(View view){
-    	Intent intent = new Intent (this, register.class); 
-    	startActivity (intent);
-    }
-    */
 
 }
