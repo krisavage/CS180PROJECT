@@ -29,6 +29,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button3"
         android:text="Video Chat"
+        android:onClick = "videoChat"
         android:textColor="#FFF" />
 
     <Button

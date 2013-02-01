@@ -29,5 +29,10 @@ public class MenuActivity extends Activity {
     	Intent intent = new Intent (this, SMSActivity.class); 
     	startActivity (intent);
     }
+    
+    public void videoChat(View view){
+    	Intent intent = new Intent (this, VideoChat.class); 
+    	startActivity (intent);
+    }
 
 }

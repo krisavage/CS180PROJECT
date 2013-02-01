@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 
 
-
 public class SMSActivity extends Activity {
 
 	Button btnSendSMS;
