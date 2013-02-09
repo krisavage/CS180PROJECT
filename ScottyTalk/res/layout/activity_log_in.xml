@@ -8,7 +8,7 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email" />
+        android:text="UserName" />
 
     <TextView
         android:id="@+id/textView2"
@@ -27,10 +27,10 @@
         android:layout_below="@+id/textView1"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:hint="Email" />
+        android:hint="User Name" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/Password1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -43,9 +43,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Password"
-        android:layout_marginTop="28dp"
-        android:text="Login" 
-        android:onClick = "LoggedInMenu"/>
+        android:layout_below="@+id/Password1"
+        android:layout_marginTop="15dp"
+        android:onClick="LoggedInMenu"
+        android:text="Login" />
 
 </RelativeLayout>

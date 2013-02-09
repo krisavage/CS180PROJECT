@@ -33,6 +33,7 @@ public class SmsReceiver extends BroadcastReceiver{
 				str += "SMS from " + msgs [i].getOriginatingAddress()
 				 + " : " + msgs [i].getMessageBody().toString() + "\n";
 			}
+			
 			Toast.makeText(context, str, Toast.LENGTH_SHORT).show();
 		}
 	}

@@ -1,6 +1,7 @@
 package com.ucr.scottytalk;
 
 import android.os.Bundle;
+import com.stackmob.android.sdk.common.StackMobAndroid;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
@@ -14,7 +15,9 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);	    
+		
+		setContentView(R.layout.activity_main);	 
+		StackMobAndroid.init(getApplicationContext(), 0, "58c2c611-5623-49ab-a835-9bcb2cf98e72");
 	}
 
 	@Override
@@ -29,10 +32,9 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent (this, LogIn.class); 
     	startActivity (intent);
     }
-/*
+    
     public void register(View view){
-    	Intent intent = new Intent (this, Register_Activity.class); 
+    	Intent intent = new Intent (this, RegisterActivity.class); 
     	startActivity (intent);
     }
-*/
 }

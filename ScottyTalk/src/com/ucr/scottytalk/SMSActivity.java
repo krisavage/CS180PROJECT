@@ -55,7 +55,6 @@ public class SMSActivity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
 				String phoneNo = txtPhoneNo.getText().toString();
 				String message = txtMessage.getText().toString();
 				
