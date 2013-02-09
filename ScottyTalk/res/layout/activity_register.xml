@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity" >
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="41dp"
+        android:text="User Name" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="68dp"
+        android:text="Password" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Phone Number" />
+
+   <EditText
+       android:id="@+id/RegisterPassword"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/textView1"
+       android:ems="10"
+       android:hint="Enter Password"/>
+        />
+
+   <EditText
+       android:id="@+id/RegisterEmail"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/textView4"
+       android:ems="10"
+  
+       android:hint="Enter Email"/>
+
+     <EditText
+         android:id="@+id/RegisterUserName"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/textView3"
+         android:ems="10"
+
+         android:hint="Enter Username"/>
+
+       <EditText
+           android:id="@+id/RegisterPhoneNum"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/textView2"
+           android:ems="10"
+ 
+           android:hint="Enter PhoneNum" />
+
+       <Button
+           android:id="@+id/Register"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/RegisterPhoneNum"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="50dp"
+           android:text="Register" 
+           android:onClick="Reg"/>
+           
+</RelativeLayout>

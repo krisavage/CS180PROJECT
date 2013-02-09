@@ -10,5 +10,7 @@
     <string name="title_activity_menu">MenuActivity</string>
     <string name="title_activity_log_in">LogIn</string>
     <string name="title_activity_video_chat">VideoChat</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_mms_">MMS_Activity</string>
 
 </resources>

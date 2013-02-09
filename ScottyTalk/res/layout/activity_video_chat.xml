@@ -5,7 +5,17 @@
     >
 
     <SurfaceView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/cameraview" />
+        android:id="@+id/subscriberview"
+        android:layout_width="220dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <SurfaceView
+        android:id="@+id/publisherview"
+        android:layout_width="220dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
 </RelativeLayout>

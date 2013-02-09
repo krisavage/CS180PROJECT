@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.EditText;
+
 
 public class MenuActivity extends Activity {
 	
@@ -15,6 +15,7 @@ public class MenuActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu);
+
 	}
 
 	@Override
@@ -34,5 +35,11 @@ public class MenuActivity extends Activity {
     	Intent intent = new Intent (this, VideoChat.class); 
     	startActivity (intent);
     }
-
+    
+    
+    public void MMS(View view){
+    	Intent intent = new Intent (this, MMS_Activity.class); 
+    	startActivity (intent);
+    }
+    
 }

@@ -11,7 +11,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.telephony.gsm.SmsManager;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -27,14 +26,13 @@ public class SMSActivity extends Activity {
 	Button btnSendSMS;
 	EditText txtPhoneNo;
 	EditText txtMessage;
-	ListView listDisplay;
+	//ListView listDisplay;
 	
 	ArrayAdapter <String> messages;
 	
     @SuppressLint("NewApi")
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
-    	Intent intent = getIntent ();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
         
@@ -46,10 +44,10 @@ public class SMSActivity extends Activity {
         btnSendSMS = (Button) findViewById (R.id.btnSendSMS);
         txtPhoneNo = (EditText) findViewById (R.id.txtPhoneNo);
         txtMessage = (EditText) findViewById (R.id.txtMessage);
-        listDisplay = (ListView) findViewById (R.id.displayMessages);
+       // listDisplay = (ListView) findViewById (R.id.displayMessages);
         
-        messages = new ArrayAdapter <String> (this, R.layout.message);
-        listDisplay.setAdapter(messages);
+        //messages = new ArrayAdapter <String> (this, R.layout.message);
+       // listDisplay.setAdapter(messages);
         
         //Listen to the send button. Check if the send button was pressed.
         btnSendSMS.setOnClickListener(new View.OnClickListener() 

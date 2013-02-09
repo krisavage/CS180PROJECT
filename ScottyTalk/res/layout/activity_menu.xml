@@ -6,33 +6,6 @@
     tools:context=".Menu_Activity" >
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="outputMessage"
-        android:text="SMS"
-        android:textColor="#FFF" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/button2"
-        android:text="MMS"
-        android:textColor="#FFF" />
-
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/button3"
-        android:text="Video Chat"
-        android:onClick = "videoChat"
-        android:textColor="#FFF" />
-
-    <Button
         android:id="@+id/button1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -48,6 +21,37 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="Profile"
+        android:textColor="#FFF" />
+
+    <Button
+        android:id="@+id/Button03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="outputMessage"
+        android:text="SMS"
+        android:textColor="#FFF" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:onClick="MMS"
+        android:text="MMS"
+        android:textColor="#FFF" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button2"
+        android:onClick="videoChat"
+        android:text="Video Chat"
         android:textColor="#FFF" />
 
 </RelativeLayout>
