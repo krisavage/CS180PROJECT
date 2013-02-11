@@ -86,6 +86,14 @@
             android:name="com.ucr.scottytalk.MMS_Activity"
             android:label="@string/title_activity_mms_" >
         </activity>
+        <activity
+            android:name="com.ucr.scottytalk.Profile_Activity"
+            android:label="@string/title_activity_profile_" >
+        </activity>
+        <activity
+            android:name="com.ucr.scottytalk.SearchActivity"
+            android:label="@string/title_activity_search" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.SEND_SMS" >

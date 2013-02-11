@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +14,13 @@ import android.view.View;
 import android.widget.ListView;
 
 public class FileChooser extends ListActivity {
-    
+
+	private String path;
+	
     private File currentDir;
     private FileArrayAdapter adapter;
-    @Override
+    @SuppressLint("SdCardPath")
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         currentDir = new File("/sdcard/");
@@ -52,12 +56,12 @@ public class FileChooser extends ListActivity {
     }
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        // TODO Auto-generated method stub
         super.onListItemClick(l, v, position, id);
         Option o = adapter.getItem(position);
         if(o.getData().equalsIgnoreCase("folder")||o.getData().equalsIgnoreCase("parent directory")){
-                currentDir = new File(o.getPath());
+        		currentDir = new File(o.getPath());
                 fill(currentDir);
+                path = o.getPath().toString () + "/";
         }
         else
         {
@@ -66,8 +70,10 @@ public class FileChooser extends ListActivity {
     }
     private void onFileClick(Option o)
     {
+    	path += o.getName().toString ();
+    	
 		Intent intent = new Intent (this, SMSActivity.class);
-		intent.putExtra ("File",o.getName());
+		intent.putExtra("Path", path);
 		setResult(RESULT_OK,intent);
 		finish ();
     }

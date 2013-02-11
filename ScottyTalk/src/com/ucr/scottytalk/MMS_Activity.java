@@ -42,6 +42,7 @@ public class MMS_Activity extends Activity {
 			MMS.saveInBackground ();
 	}
 	
+	@SuppressWarnings("null")
 	void ReceiveMMS (){
 		ParseObject MMS = null;
 		ParseFile File = (ParseFile)MMS.get("File");
@@ -72,7 +73,7 @@ public class MMS_Activity extends Activity {
     	     if(resultCode == RESULT_OK){
 
     	    	 //FILE SAVED IN RESULT
-    	    	 result = data.getStringExtra("File");
+    	    	 result = data.getStringExtra("Path");
     	       Toast.makeText(this, "File Clicked: "+result, Toast.LENGTH_SHORT).show();
 
     	}

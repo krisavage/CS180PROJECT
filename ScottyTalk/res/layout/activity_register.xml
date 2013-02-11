@@ -4,24 +4,6 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:text="UserName" />
-
-    <EditText
-        android:id="@+id/userName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:ems="10"
-        android:hint="UserName" />
-
     <EditText
         android:id="@+id/Password"
         android:layout_width="match_parent"
@@ -51,13 +33,13 @@
         android:text="Register" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/PhoneNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/TextView02"
         android:ems="10"
-        android:hint="Email" />
+        android:hint="PhoneNum" />
 
     <TextView
         android:id="@+id/TextView02"
@@ -66,6 +48,42 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/Password"
         android:layout_marginTop="14dp"
-        android:text="Email" />
+        android:text="PhoneNum" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Name"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="UserName" />
+
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextView03"
+        android:ems="10"
+        android:hint="Name" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Name"
+        android:layout_marginTop="17dp"
+        android:text="UserName" />
 
 </RelativeLayout>

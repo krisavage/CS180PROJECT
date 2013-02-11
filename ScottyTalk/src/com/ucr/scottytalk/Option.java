@@ -1,5 +1,7 @@
 package com.ucr.scottytalk;
 
+import android.annotation.SuppressLint;
+
 public class Option implements Comparable<Option>{
     private String name;
     private String data;
@@ -27,7 +29,8 @@ public class Option implements Comparable<Option>{
         return path;
     }
     
-    @Override
+    @SuppressLint("DefaultLocale")
+	@Override
     public int compareTo(Option o) {
         if(this.name != null)
             return this.name.toLowerCase().compareTo(o.getName().toLowerCase());

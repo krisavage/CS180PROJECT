@@ -15,7 +15,6 @@ import com.stackmob.sdk.exception.StackMobException;
 
 public class LogIn extends Activity{
 
-	//Button loginbutton;
 	EditText pass;
 	EditText User;
 	boolean login = false;
@@ -54,6 +53,7 @@ public class LogIn extends Activity{
         
         if (login){
         	Intent intent = new Intent (this, MenuActivity.class); 
+        	 intent.putExtra("user", User.getText().toString()); 
         	startActivity (intent);
         }
         else {

@@ -9,12 +9,16 @@ import android.view.View;
 
 public class MenuActivity extends Activity {
 	
-	public final static String EXTRA_MESSAGE = "com.ucr.scottytalk.MESSAGE";
+String addOn;
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu);
+		
+		Bundle extras = getIntent().getExtras(); 
+		addOn = extras.getString("user");
 
 	}
 
@@ -39,6 +43,18 @@ public class MenuActivity extends Activity {
     
     public void MMS(View view){
     	Intent intent = new Intent (this, MMS_Activity.class); 
+    	startActivity (intent);
+    }
+    
+    public void Profile(View view){
+    	Intent intent = new Intent (this, Profile_Activity.class); 
+    	intent.putExtra("user", addOn);
+    	startActivity (intent);
+    }
+    
+    public void search(View view){
+    	Intent intent = new Intent (this, SearchActivity.class); 
+    	intent.putExtra("user", addOn);
     	startActivity (intent);
     }
     

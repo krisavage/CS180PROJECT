@@ -12,7 +12,9 @@
         android:layout_above="@+id/Button02"
         android:layout_alignParentLeft="true"
         android:text="Search"
-        android:textColor="#FFF" />
+        android:textColor="#FFF"
+        android:onClick = "search"
+         />
 
     <Button
         android:id="@+id/Button02"
@@ -21,7 +23,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="Profile"
-        android:textColor="#FFF" />
+        android:textColor="#FFF" 
+        android:onClick = "Profile"
+        />
 
     <Button
         android:id="@+id/Button03"

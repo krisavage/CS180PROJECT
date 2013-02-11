@@ -111,6 +111,7 @@ public class VideoChat extends Activity implements Publisher.Listener, Session.L
 	private WakeLock wakeLock;
 	boolean cameraview;
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -185,7 +186,6 @@ public class VideoChat extends Activity implements Publisher.Listener, Session.L
 				}
 				try {
 					String APIKey = "22725422";
-					String Secret = "9ab1dea6e287c41d0f2516b7e05ddfcb269c8849";
 					String sessionID = "2_MX4yMjcyNTQyMn5-RnJpIEZlYiAwOCAwMTo0Njo0MCBQU1QgMjAxM34wLjcxNDI0NDR-";
 					String token = 	"T1==cGFydG5lcl9pZD0gMjI3MjU0MjImc2lnPTM3NjI2NjdiZGNkNTkzMzUyZjNlYjAzNzdlNDcwZmExYmU5ZWJhZWY6c2Vzc2lvbl9pZD0yX01YNHlNamN5TlRReU1uNS1SbkpwSUVabFlpQXdPQ0F3TVRvME5qbzBNQ0JRVTFRZ01qQXhNMzR3TGpjeE5ESTBORFItJmNyZWF0ZV90aW1lPTEzNjAzMTY4NTAmZXhwaXJlX3RpbWU9MTM2MDQwMzI1MCZyb2xlPXB1Ymxpc2hlciZjb25uZWN0aW9uX2RhdGE9Jm5vbmNlPTQwODk1Nw==";
 					session = Session.newInstance(getApplicationContext(), 

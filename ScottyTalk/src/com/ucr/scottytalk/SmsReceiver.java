@@ -14,6 +14,7 @@ import android.widget.Toast;
  * @author ndlerena
  *
  */
+@SuppressWarnings("deprecation")
 public class SmsReceiver extends BroadcastReceiver{
 	
 	@Override

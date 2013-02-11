@@ -13,22 +13,18 @@ import android.support.v4.app.NavUtils;
 import android.telephony.gsm.SmsManager;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 
 
+@SuppressWarnings("deprecation")
 public class SMSActivity extends Activity {
 
 	Button btnSendSMS;
 	EditText txtPhoneNo;
 	EditText txtMessage;
-	//ListView listDisplay;
-	
-	ArrayAdapter <String> messages;
 	
     @SuppressLint("NewApi")
 	@Override
@@ -44,12 +40,7 @@ public class SMSActivity extends Activity {
         btnSendSMS = (Button) findViewById (R.id.btnSendSMS);
         txtPhoneNo = (EditText) findViewById (R.id.txtPhoneNo);
         txtMessage = (EditText) findViewById (R.id.txtMessage);
-       // listDisplay = (ListView) findViewById (R.id.displayMessages);
-        
-        //messages = new ArrayAdapter <String> (this, R.layout.message);
-       // listDisplay.setAdapter(messages);
-        
-        //Listen to the send button. Check if the send button was pressed.
+
         btnSendSMS.setOnClickListener(new View.OnClickListener() 
         {
 
@@ -61,7 +52,6 @@ public class SMSActivity extends Activity {
 				//If the phone number and message field are not empty send it.
 				if (phoneNo.length() > 0 && message.length () > 0) {
 					sendSMS(phoneNo,message);
-					messages.add ("You: " +message);
 				}
 				//else display an error message.
 				else

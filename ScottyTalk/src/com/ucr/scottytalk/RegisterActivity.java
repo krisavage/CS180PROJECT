@@ -10,6 +10,8 @@ import android.widget.EditText;
 public class RegisterActivity extends Activity {
 	EditText username;
 	EditText password;
+	EditText name;
+	EditText phoneNum;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,8 @@ public class RegisterActivity extends Activity {
 		
 		username = (EditText)findViewById (R.id.userName);
 		password = (EditText)findViewById (R.id.Password);
+		name = (EditText)findViewById (R.id.Name);
+		phoneNum = (EditText)findViewById (R.id.PhoneNum);
 	}
 
 	@Override
@@ -30,6 +34,9 @@ public class RegisterActivity extends Activity {
     public void register(View view){
     	User user = new User(username.getText().toString(), password.getText().toString());
     	user.save();
+    	Profile a = new Profile (name.getText().toString(), phoneNum.getText().toString() ,username.getText().toString());
+    	
+    	a.save();
     	
     	Intent intent = new Intent (this, MenuActivity.class); 
     	startActivity (intent);
