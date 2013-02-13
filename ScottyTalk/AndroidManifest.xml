@@ -94,6 +94,10 @@
             android:name="com.ucr.scottytalk.SearchActivity"
             android:label="@string/title_activity_search" >
         </activity>
+        <activity
+            android:name="com.ucr.scottytalk.Friends_Activity"
+            android:label="@string/title_activity_friends_" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.SEND_SMS" >

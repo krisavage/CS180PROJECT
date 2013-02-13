@@ -14,5 +14,6 @@
     <string name="title_activity_mms_">MMS_Activity</string>
     <string name="title_activity_profile_">Profile_Activity</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_friends_">Friends_Activity</string>
 
 </resources>

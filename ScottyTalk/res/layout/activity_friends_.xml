@@ -5,15 +5,10 @@
     tools:context=".Profile_Activity" >
 
     <ListView
-        android:id="@+id/mylist"
+        android:id="@+id/FriendsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/txt" />
+	/>
 
-    <TextView
-        android:id = "@+id/txt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Click on a user to add as a Friend" />
 
 </RelativeLayout>

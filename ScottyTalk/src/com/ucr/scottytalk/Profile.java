@@ -7,6 +7,7 @@ public class Profile extends StackMobModel {
 	private String phoneNum;
 	private String username;
 
+
 	
 	public Profile(String name, String pnum, String UserName) {
 		super(Profile.class);
@@ -21,4 +22,5 @@ public class Profile extends StackMobModel {
         return phoneNum;}
     public String getUserName() {
         return username;}
+
 }

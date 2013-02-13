@@ -58,4 +58,11 @@ String addOn;
     	startActivity (intent);
     }
     
+    
+    public void ViewFriends(View view){
+    	Intent intent = new Intent (this, Friends_Activity.class); 
+    	intent.putExtra("user", addOn);
+    	startActivity (intent);
+    }
+    
 }
