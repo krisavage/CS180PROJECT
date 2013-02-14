@@ -3,6 +3,7 @@ package com.ucr.scottytalk;
 import java.util.Arrays;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,13 +26,15 @@ import com.stackmob.sdk.api.StackMobQuery;
 import com.stackmob.sdk.callback.StackMobQueryCallback;
 import com.stackmob.sdk.exception.StackMobException;
 
+@SuppressLint("HandlerLeak")
 public class SearchActivity extends Activity {
 	ListView profileview;
 	ArrayAdapter <String> Info;
 	String addOn;
 	String NF;
 	
-	  protected Handler handler = new Handler() {
+	  @SuppressLint("HandlerLeak")
+	protected Handler handler = new Handler() {
 		    @Override
 		    public void handleMessage(Message msg) {
 		      Info.add((String)msg.obj);
@@ -106,7 +109,7 @@ public class SearchActivity extends Activity {
 						  for (int i = 0; i < temp.size (); i++)
 							  if (NF.equals(temp.get(i))){
 								  Toast.makeText(getApplicationContext(),
-										  "All ready a user", Toast.LENGTH_SHORT).show();
+										  "All ready a friend", Toast.LENGTH_SHORT).show();
 								  return;
 							  }
 						  
