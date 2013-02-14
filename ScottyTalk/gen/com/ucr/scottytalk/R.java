@@ -31,11 +31,13 @@ public final class R {
         public static final int button1=0x7f070006;
         public static final int button2=0x7f070009;
         public static final int editText1=0x7f07000b;
+        public static final int editText2=0x7f07001c;
+        public static final int groupbtnSendSMS=0x7f070019;
         public static final int loginbutton=0x7f070005;
-        public static final int menu_settings=0x7f07001b;
+        public static final int menu_settings=0x7f07001d;
         public static final int mylist=0x7f070014;
-        public static final int publisherview=0x7f07001a;
-        public static final int subscriberview=0x7f070019;
+        public static final int publisherview=0x7f07001b;
+        public static final int subscriberview=0x7f07001a;
         public static final int textView1=0x7f070001;
         public static final int textView2=0x7f070002;
         public static final int txt=0x7f070015;
@@ -56,6 +58,8 @@ public final class R {
         public static final int activity_video_chat=0x7f030009;
         public static final int file_view=0x7f03000a;
         public static final int info=0x7f03000b;
+        public static final int login=0x7f03000c;
+        public static final int message=0x7f03000d;
     }
     public static final class menu {
         public static final int activity_display_message=0x7f060000;

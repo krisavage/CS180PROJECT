@@ -37,5 +37,10 @@
    	    android:layout_height = "wrap_content"
    	    android:text = "Send SMS"
    	    />
-
+	<Button
+   	    android:id = "@+id/groupbtnSendSMS"
+   	    android:layout_width = "match_parent"
+   	    android:layout_height = "wrap_content"
+   	    android:text = "Send group SMS"
+   	    />
 </LinearLayout>
