@@ -1,11 +1,15 @@
 package com.ucr.scottytalk;
 
+import java.util.Arrays;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+
+import com.parse.ParseObject;
 
 public class RegisterActivity extends Activity {
 	EditText username;
@@ -33,13 +37,19 @@ public class RegisterActivity extends Activity {
 
     public void register(View view){
     	User user = new User(username.getText().toString(), password.getText().toString());
-    	user.save();
     	Profile a = new Profile (name.getText().toString(), phoneNum.getText().toString() ,username.getText().toString());
+    	final ParseObject Friends = new ParseObject ("Friends");
+    	Friends.put("User", username.getText().toString());
+    	Friends.put("Friends", Arrays.asList());
     	
+    	Friends.saveInBackground();
     	a.save();
+    	user.save();
+    	
     	
     	Intent intent = new Intent (this, MenuActivity.class); 
-    	startActivity (intent);
+   	 	intent.putExtra("user", username.getText().toString()); 
+   	 	startActivity (intent);
     }
-	
 }
+
