@@ -17,6 +17,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+@SuppressLint("HandlerLeak")
 public class Friends_Activity extends Activity {
 	ListView FriendsView;
 	String addOn;

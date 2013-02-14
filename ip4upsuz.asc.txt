@@ -1,0 +1,37 @@
+updates smsactivity to send to multiple users
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   ScottyTalk/.classpath
+#	modified:   ScottyTalk/bin/MainActivity.apk
+#	modified:   ScottyTalk/bin/classes.dex
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/R$id.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/R$layout.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/R$menu.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/R$string.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/R$style.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/SMSActivity$1.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/SMSActivity$2.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/SMSActivity$3.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/SMSActivity$4.class
+#	renamed:    ScottyTalk/bin/classes/com/ucr/scottytalk/SMSActivity$2.class -> ScottyTalk/bin/classes/com/ucr/scottytalk/SMSActivity$5.class
+#	new file:   ScottyTalk/bin/classes/com/ucr/scottytalk/SMSActivity$6.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/SMSActivity.class
+#	modified:   ScottyTalk/bin/classes/com/ucr/scottytalk/VideoChat.class
+#	modified:   ScottyTalk/bin/resources.ap_
+#	modified:   ScottyTalk/gen/com/ucr/scottytalk/R.java
+#	modified:   ScottyTalk/res/layout/activity_sms.xml
+#	modified:   ScottyTalk/src/com/ucr/scottytalk/SMSActivity.java
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    ScottyTalk/bin/classes/com/ucr/scottytalk/LoginUser.class
+#
+
