@@ -78,7 +78,7 @@ public class SearchActivity extends Activity {
 					    		}
 					    		else {
 					    			Message message = handler.obtainMessage();
-					    			message.obj =  (result.get(i).getName());
+					    			message.obj =  (result.get(i).getUserName());
 					    			handler.sendMessage(message);
 					    		}
 					    	}

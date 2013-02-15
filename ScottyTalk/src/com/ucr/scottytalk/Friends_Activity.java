@@ -4,12 +4,17 @@ import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.GetCallback;
@@ -22,6 +27,7 @@ public class Friends_Activity extends Activity {
 	ListView FriendsView;
 	String addOn;
 	ArrayAdapter <String> profiles;
+
 	@SuppressLint("HandlerLeak")
 	protected Handler handler = new Handler() {
 		@Override
@@ -45,8 +51,23 @@ public class Friends_Activity extends Activity {
         
 	    UpdateTask updateTask = new UpdateTask();
 	    updateTask.start();
+	    
+    	FriendsView.setOnItemClickListener(new OnItemClickListener() {
+    		public void onItemClick(AdapterView<?> parent, View view,
+    				int position, long id) {
+    			
+    			friendsprofile (((TextView) view).getText().toString ());
+
+    		}
+    	});	 
 	}
 
+	void friendsprofile (String user){
+    	Intent intent = new Intent (this, Profile_Activity.class); 
+    	intent.putExtra("user",user);
+    	startActivity (intent);
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
