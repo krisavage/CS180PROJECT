@@ -38,11 +38,13 @@ public class RegisterActivity extends Activity {
     public void register(View view){
     	User user = new User(username.getText().toString(), password.getText().toString());
     	Profile a = new Profile (name.getText().toString(), phoneNum.getText().toString() ,username.getText().toString());
+    	
     	final ParseObject Friends = new ParseObject ("Friends");
     	Friends.put("User", username.getText().toString());
     	Friends.put("Friends", Arrays.asList());
-    	
+
     	Friends.saveInBackground();
+    	
     	a.save();
     	user.save();
     	

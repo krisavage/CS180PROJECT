@@ -1,7 +1,6 @@
 package com.ucr.scottytalk;
 
 
-import java.io.File;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,9 +8,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.*;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import com.parse.*;
+import com.parse.GetDataCallback;
+import com.parse.ParseException;
+import com.parse.ParseFile;
+import com.parse.ParseObject;
+import com.parse.ParsePush;
+import com.parse.SendCallback;
 
 
 public class MMS_Activity extends Activity {

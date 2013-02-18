@@ -5,6 +5,9 @@ import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -53,6 +56,7 @@ public class SearchActivity extends Activity {
 		Bundle extras = getIntent().getExtras(); 
 		addOn = extras.getString("user");
         profileview.setAdapter(Info); 
+        
 	    UpdateTask updateTask = new UpdateTask();
 	    updateTask.start();
 	    
@@ -61,11 +65,36 @@ public class SearchActivity extends Activity {
     				int position, long id) {
     			
     			NF = ((TextView) view).getText().toString ();
+ 
     			
-    			UpdateFriends updateFriends = new UpdateFriends ();
-    			updateFriends.start ();
+    			Alert ();
+
     		}
     	});	   
+	}
+	
+	void Alert () {
+   			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+					this);
+   			alertDialogBuilder.setTitle("Scotty Talk");
+   			
+   			alertDialogBuilder
+			.setMessage(NF)
+			.setCancelable(false)
+			.setPositiveButton("Add as Friend",new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog,int id) {
+	    			UpdateFriends updateFriends = new UpdateFriends ();
+	    			updateFriends.start ();
+				}
+			  })
+			.setNegativeButton("Add to Group",new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog,int id) {
+					AddtoGroup ();
+				}
+			});
+   			
+			AlertDialog alertDialog = alertDialogBuilder.create();
+			alertDialog.show();
 	}
 	
 	  protected class UpdateTask extends Thread implements Runnable {
@@ -130,6 +159,13 @@ public class SearchActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_search, menu);
 		return true;
+	}
+	
+	void AddtoGroup (){
+    	Intent intent = new Intent (this, Add2Group.class); 
+    	intent.putExtra("user",addOn);
+    	intent.putExtra("member", NF);
+    	startActivity (intent);
 	}
 	
 }

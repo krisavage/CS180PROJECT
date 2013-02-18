@@ -98,6 +98,14 @@
             android:name="com.ucr.scottytalk.Friends_Activity"
             android:label="@string/title_activity_friends_" >
         </activity>
+        <activity
+            android:name="com.ucr.scottytalk.GroupActivity"
+            android:label="@string/title_activity_group" >
+        </activity>
+        <activity
+            android:name="com.ucr.scottytalk.Add2Group"
+            android:label="@string/title_activity_add2_group" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.SEND_SMS" >

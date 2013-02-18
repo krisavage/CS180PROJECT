@@ -15,5 +15,7 @@
     <string name="title_activity_profile_">Profile_Activity</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_friends_">Friends_Activity</string>
+    <string name="title_activity_group">GroupActivity</string>
+    <string name="title_activity_add2_group">Add2Group</string>
 
 </resources>

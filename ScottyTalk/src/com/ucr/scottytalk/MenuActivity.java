@@ -58,6 +58,12 @@ String addOn;
     	startActivity (intent);
     }
     
+    public void Group(View view){
+    	Intent intent = new Intent (this, GroupActivity.class); 
+    	intent.putExtra("user", addOn);
+    	startActivity (intent);
+    }
+    
     
     public void ViewFriends(View view){
     	Intent intent = new Intent (this, Friends_Activity.class); 

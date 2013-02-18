@@ -57,14 +57,25 @@
        android:text="Friends"
        android:textColor="#FFF" />
 
-   <Button
-       android:id="@+id/button1"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:layout_above="@+id/Button01"
-       android:layout_alignParentLeft="true"
-       android:onClick="search"
-       android:text="Search"
-       android:textColor="#FFF" />
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/Button01"
+          android:layout_alignParentLeft="true"
+          android:onClick="Group"
+          android:text="Groups"
+          android:textColor="#FFF" />
+
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/Button01"
+          android:layout_alignParentLeft="true"
+          android:layout_marginBottom="48dp"
+          android:onClick="search"
+          android:text="Search"
+          android:textColor="#FFF" />
 
 </RelativeLayout>
