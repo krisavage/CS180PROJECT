@@ -34,7 +34,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="44dp"
         android:onClick="MMS"
-        android:text="MMS"
+        android:text="FileTransfer"
         android:textColor="#FFF" />
 
     <Button
