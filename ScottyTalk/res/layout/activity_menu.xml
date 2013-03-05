@@ -35,7 +35,11 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="44dp"
         android:onClick="MMS"
+<<<<<<< HEAD
         android:text="File Transfer"
+=======
+        android:text="FileTransfer"
+>>>>>>> cfc5dc43e176179e3324b88c48665505418201ff
         android:textColor="#FFF" />
 
     <Button
