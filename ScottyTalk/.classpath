@@ -7,5 +7,8 @@
 	<classpathentry kind="lib" path="libs/stackmob-android-sdk-1.1.1.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="C:/Users/kgont_000/Downloads/voiceimeutils.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kgont_000/Desktop/android-recorder-5.1/lib/org.springframework.core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kgont_000/Desktop/android-recorder-5.1/lib/slf4j-android-1.6.1-RC1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

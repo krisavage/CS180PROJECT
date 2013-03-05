@@ -12,44 +12,49 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int icon=0x7f020001;
+        public static final int sym_keyboard_mic=0x7f020002;
     }
     public static final class id {
         public static final int Button01=0x7f070010;
         public static final int Button02=0x7f07000d;
         public static final int Button03=0x7f07000e;
+        public static final int Buttonptt=0x7f070011;
         public static final int EmailAddress=0x7f070009;
         public static final int FriendsList=0x7f070006;
         public static final int GroupList=0x7f070005;
         public static final int GroupName=0x7f070001;
         public static final int GroupsList=0x7f070007;
         public static final int MemberText=0x7f070000;
-        public static final int Name=0x7f070019;
+        public static final int Name=0x7f07001b;
         public static final int NewGroup=0x7f070003;
-        public static final int Password=0x7f070013;
+        public static final int Password=0x7f070015;
         public static final int Password1=0x7f07000a;
-        public static final int PhoneNum=0x7f070016;
+        public static final int PhoneNum=0x7f070018;
         public static final int ProfileView=0x7f070012;
-        public static final int TextView01=0x7f070015;
-        public static final int TextView02=0x7f070017;
-        public static final int TextView03=0x7f070018;
-        public static final int btnSendSMS=0x7f07001e;
+        public static final int TextView01=0x7f070017;
+        public static final int TextView02=0x7f070019;
+        public static final int TextView03=0x7f07001a;
+        public static final int btnSendSMS=0x7f070020;
+        public static final int btnStart=0x7f070013;
+        public static final int btnStop=0x7f070014;
         public static final int button1=0x7f07000c;
         public static final int button2=0x7f07000f;
-        public static final int editText1=0x7f070011;
-        public static final int editText2=0x7f070022;
-        public static final int groupbtnSendSMS=0x7f07001f;
+        public static final int editText1=0x7f070024;
+        public static final int editText2=0x7f070025;
+        public static final int groupbtnSendSMS=0x7f070021;
         public static final int loginbutton=0x7f07000b;
-        public static final int menu_settings=0x7f070023;
-        public static final int mylist=0x7f07001a;
-        public static final int publisherview=0x7f070021;
-        public static final int subscriberview=0x7f070020;
+        public static final int menu_settings=0x7f070026;
+        public static final int mylist=0x7f07001c;
+        public static final int publisherview=0x7f070023;
+        public static final int subscriberview=0x7f070022;
         public static final int textView1=0x7f070002;
         public static final int textView2=0x7f070008;
         public static final int textView20=0x7f070004;
-        public static final int txt=0x7f07001b;
-        public static final int txtMessage=0x7f07001d;
-        public static final int txtPhoneNo=0x7f07001c;
-        public static final int userName=0x7f070014;
+        public static final int txt=0x7f07001d;
+        public static final int txtMessage=0x7f07001f;
+        public static final int txtPhoneNo=0x7f07001e;
+        public static final int userName=0x7f070016;
     }
     public static final class layout {
         public static final int activity_add2_group=0x7f030000;
@@ -60,14 +65,15 @@ public final class R {
         public static final int activity_menu=0x7f030005;
         public static final int activity_mms_=0x7f030006;
         public static final int activity_profile_=0x7f030007;
-        public static final int activity_register=0x7f030008;
-        public static final int activity_search=0x7f030009;
-        public static final int activity_sms=0x7f03000a;
-        public static final int activity_video_chat=0x7f03000b;
-        public static final int file_view=0x7f03000c;
-        public static final int info=0x7f03000d;
-        public static final int login=0x7f03000e;
-        public static final int message=0x7f03000f;
+        public static final int activity_ptt=0x7f030008;
+        public static final int activity_register=0x7f030009;
+        public static final int activity_search=0x7f03000a;
+        public static final int activity_sms=0x7f03000b;
+        public static final int activity_video_chat=0x7f03000c;
+        public static final int file_view=0x7f03000d;
+        public static final int info=0x7f03000e;
+        public static final int login=0x7f03000f;
+        public static final int message=0x7f030010;
     }
     public static final class menu {
         public static final int activity_add2_group=0x7f060000;

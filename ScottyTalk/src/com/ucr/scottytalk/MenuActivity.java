@@ -71,4 +71,12 @@ String addOn;
     	startActivity (intent);
     }
     
+    
+    public void push2Talk(View view){
+    	Intent intent = new Intent (this, RecordActivity.class); 
+    	intent.putExtra("user", addOn);
+    	startActivity (intent);
+    }
+    
+    
 }

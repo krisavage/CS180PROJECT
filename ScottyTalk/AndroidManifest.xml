@@ -23,6 +23,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
 
     <application
         android:allowBackup="true"
@@ -106,6 +108,24 @@
             android:name="com.ucr.scottytalk.Add2Group"
             android:label="@string/title_activity_add2_group" >
         </activity>
+        
+        <activity
+            android:name="com.ucr.scottytalk.RecordActivity"
+            android:label="activity_ptt" >
+        </activity>
+        
+        <service android:name="com.google.android.voiceime.ServiceHelper" />
+    <activity 
+        android:name="com.google.android.voiceime.ActivityHelper"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        android:excludeFromRecents="true"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        android:finishOnTaskLaunch="true"
+       />
+        
+        
+        
+        
     </application>
 
     <uses-permission android:name="android.permission.SEND_SMS" >
