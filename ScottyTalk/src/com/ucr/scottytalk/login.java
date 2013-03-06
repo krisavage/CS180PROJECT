@@ -8,9 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.stackmob.sdk.api.StackMob;
 import com.stackmob.sdk.api.StackMobOptions;
-import com.stackmob.sdk.api.StackMobSession;
 import com.stackmob.sdk.callback.StackMobCallback;
 import com.stackmob.sdk.exception.StackMobException;
 import com.stackmob.sdk.model.StackMobUser;
@@ -30,7 +28,6 @@ public class LogIn extends Activity{
         pass = (EditText) findViewById (R.id.Password1);
         User = (EditText) findViewById (R.id.EmailAddress);
     }
-    
     
     public void login(final StackMobUser user) {
     	user.login(StackMobOptions.depthOf(2), new StackMobCallback() {
@@ -61,28 +58,6 @@ public class LogIn extends Activity{
     public void LoggedInMenu(View view){ 
 
     	login (getuser ());
-      /* User user = new User(User.getText().toString(), pass.getText().toString());
-        user.login(new StackMobModelCallback() {
-         
-            @Override
-            public void success() {
-            	login = true;
-            }
-         
-            @Override
-            public void failure(StackMobException e) {
-
-            }
-        });
-        
-        if (login){
-        	Intent intent = new Intent (this, MenuActivity.class); 
-        	 intent.putExtra("user", User.getText().toString()); 
-        	startActivity (intent);
-        }
-        else {
-        	Toast.makeText(this, "Failed to LogIn", Toast.LENGTH_SHORT).show();
-        } */
     }
 }
 
