@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.parse.ParseObject;
 import com.stackmob.sdk.api.StackMobQuery;
@@ -68,7 +67,6 @@ public class RegisterActivity extends Activity {
     				else
     				createuser ();
     			}
-
 				public void failure(StackMobException e) {
     				finish(); //Toast.makeText(getApplicationContext(), "failed to create user", Toast.LENGTH_SHORT).show();
     			}

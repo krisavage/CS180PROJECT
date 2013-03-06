@@ -109,6 +109,10 @@
             android:name="com.ucr.scottytalk.RecordActivity"
             android:label="@string/title_activity_record" >
         </activity>
+        <activity
+            android:name="com.ucr.scottytalk.SMSSPecialActivity"
+            android:label="@string/title_activity_smsspecial" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.SEND_SMS" >

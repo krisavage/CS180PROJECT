@@ -32,6 +32,7 @@ String addOn;
 	//Function that handles the SMS button
     public void outputMessage(View view){
     	Intent intent = new Intent (this, SMSActivity.class); 
+    	intent.putExtra ("user", "-1");
     	startActivity (intent);
     }
     

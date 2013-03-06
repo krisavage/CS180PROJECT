@@ -33,19 +33,20 @@ public final class R {
         public static final int TextView01=0x7f070016;
         public static final int TextView02=0x7f070018;
         public static final int TextView03=0x7f070019;
+        public static final int USER=0x7f070021;
         public static final int btnSendSMS=0x7f07001f;
         public static final int btnStart=0x7f070012;
         public static final int btnStop=0x7f070013;
         public static final int button1=0x7f07000c;
         public static final int button2=0x7f07000f;
-        public static final int editText1=0x7f070023;
-        public static final int editText2=0x7f070024;
+        public static final int editText1=0x7f070024;
+        public static final int editText2=0x7f070025;
         public static final int groupbtnSendSMS=0x7f070020;
         public static final int loginbutton=0x7f07000b;
-        public static final int menu_settings=0x7f070025;
+        public static final int menu_settings=0x7f070026;
         public static final int mylist=0x7f07001b;
-        public static final int publisherview=0x7f070022;
-        public static final int subscriberview=0x7f070021;
+        public static final int publisherview=0x7f070023;
+        public static final int subscriberview=0x7f070022;
         public static final int textView1=0x7f070002;
         public static final int textView2=0x7f070008;
         public static final int textView20=0x7f070004;
@@ -67,11 +68,12 @@ public final class R {
         public static final int activity_register=0x7f030009;
         public static final int activity_search=0x7f03000a;
         public static final int activity_sms=0x7f03000b;
-        public static final int activity_video_chat=0x7f03000c;
-        public static final int file_view=0x7f03000d;
-        public static final int info=0x7f03000e;
-        public static final int login=0x7f03000f;
-        public static final int message=0x7f030010;
+        public static final int activity_smsspecial=0x7f03000c;
+        public static final int activity_video_chat=0x7f03000d;
+        public static final int file_view=0x7f03000e;
+        public static final int info=0x7f03000f;
+        public static final int login=0x7f030010;
+        public static final int message=0x7f030011;
     }
     public static final class menu {
         public static final int activity_add2_group=0x7f060000;
@@ -88,7 +90,8 @@ public final class R {
         public static final int activity_register=0x7f06000b;
         public static final int activity_search=0x7f06000c;
         public static final int activity_sms=0x7f06000d;
-        public static final int activity_video_chat=0x7f06000e;
+        public static final int activity_smsspecial=0x7f06000e;
+        public static final int activity_video_chat=0x7f06000f;
     }
     public static final class string {
         public static final int app_name=0x7f040000;
@@ -107,6 +110,7 @@ public final class R {
         public static final int title_activity_register=0x7f040009;
         public static final int title_activity_search=0x7f04000c;
         public static final int title_activity_sms=0x7f040005;
+        public static final int title_activity_smsspecial=0x7f040011;
         public static final int title_activity_video_chat=0x7f040008;
     }
     public static final class style {

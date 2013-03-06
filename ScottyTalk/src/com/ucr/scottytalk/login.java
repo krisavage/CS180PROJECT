@@ -39,7 +39,7 @@ public class LogIn extends Activity{
     		
     		@Override
     		public void failure(StackMobException arg0) {
-    			Toast.makeText(getApplicationContext(), arg0.getMessage(), Toast.LENGTH_SHORT).show();
+    			Toast.makeText(getApplicationContext(), "Authentication Failed", Toast.LENGTH_SHORT).show();
     			
     		}
     	});

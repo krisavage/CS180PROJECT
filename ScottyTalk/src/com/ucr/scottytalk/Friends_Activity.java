@@ -4,6 +4,8 @@ import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -56,7 +58,9 @@ public class Friends_Activity extends Activity {
     		public void onItemClick(AdapterView<?> parent, View view,
     				int position, long id) {
     			
-    			friendsprofile (((TextView) view).getText().toString ());
+    			String friend =  ((TextView) view).getText().toString ();
+    			Alert (friend);
+    			
 
     		}
     	});	 
@@ -68,11 +72,41 @@ public class Friends_Activity extends Activity {
     	startActivity (intent);
 	}
 	
+	
+	void Alert (final String NF) {
+			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+				this);
+			alertDialogBuilder.setTitle("Scotty Talk");
+			
+			alertDialogBuilder
+		.setMessage(NF)
+		.setCancelable(false)
+		.setPositiveButton("SMS",new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog,int id) {
+    			SMS (NF);
+			}
+		  })
+		.setNegativeButton("View Profile",new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog,int id) {
+				friendsprofile (NF);
+			}
+		});
+			
+		AlertDialog alertDialog = alertDialogBuilder.create();
+		alertDialog.show();
+}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_friends_, menu);
 		return true;
+	}
+	
+	void SMS (String user){
+    	Intent intent = new Intent (this, SMSSPecialActivity.class); 
+    	intent.putExtra("user",user);
+    	startActivity (intent);
 	}
 	
 	  protected class UpdateTask extends Thread implements Runnable {
