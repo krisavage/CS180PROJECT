@@ -43,8 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button2"
-        android:onClick="videoChat"
-        android:text="Video Chat"
+        android:onClick="PTT"
+        android:text="Push To Talk"
         android:textColor="#FFF" />
 
    <Button

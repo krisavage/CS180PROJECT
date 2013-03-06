@@ -35,12 +35,6 @@ String addOn;
     	startActivity (intent);
     }
     
-    public void videoChat(View view){
-    	Intent intent = new Intent (this, VideoChat.class); 
-    	startActivity (intent);
-    }
-    
-    
     public void MMS(View view){
     	Intent intent = new Intent (this, MMS_Activity.class); 
     	startActivity (intent);
@@ -68,6 +62,11 @@ String addOn;
     public void ViewFriends(View view){
     	Intent intent = new Intent (this, Friends_Activity.class); 
     	intent.putExtra("user", addOn);
+    	startActivity (intent);
+    }
+    
+    public void PTT(View view){
+    	Intent intent = new Intent (this, RecordActivity.class); 
     	startActivity (intent);
     }
     
