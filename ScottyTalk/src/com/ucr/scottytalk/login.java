@@ -8,8 +8,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.stackmob.sdk.callback.StackMobModelCallback;
+import com.stackmob.sdk.api.StackMob;
+import com.stackmob.sdk.api.StackMobOptions;
+import com.stackmob.sdk.api.StackMobSession;
+import com.stackmob.sdk.callback.StackMobCallback;
 import com.stackmob.sdk.exception.StackMobException;
+import com.stackmob.sdk.model.StackMobUser;
 
 public class LogIn extends Activity{
 
@@ -28,9 +32,36 @@ public class LogIn extends Activity{
     }
     
     
-    public void LoggedInMenu(View view){    	
-    	
-       User user = new User(User.getText().toString(), pass.getText().toString());
+    public void login(final StackMobUser user) {
+    	user.login(StackMobOptions.depthOf(2), new StackMobCallback() {
+    		
+    		@Override
+    		public void success(String arg0) {
+    			successLogIn ();
+    		}
+    		
+    		@Override
+    		public void failure(StackMobException arg0) {
+    			Toast.makeText(getApplicationContext(), arg0.getMessage(), Toast.LENGTH_SHORT).show();
+    			
+    		}
+    	});
+    }
+    
+    void successLogIn  () {
+    	Intent i = new Intent (this, MenuActivity.class);
+		i.putExtra("user", User.getText().toString());
+	  	startActivity (i);
+    }
+    
+    User getuser (){
+    	return  new User(User.getText().toString(), pass.getText().toString());
+    }
+    
+    public void LoggedInMenu(View view){ 
+
+    	login (getuser ());
+      /* User user = new User(User.getText().toString(), pass.getText().toString());
         user.login(new StackMobModelCallback() {
          
             @Override
@@ -51,6 +82,8 @@ public class LogIn extends Activity{
         }
         else {
         	Toast.makeText(this, "Failed to LogIn", Toast.LENGTH_SHORT).show();
-        }
+        } */
     }
 }
+
+

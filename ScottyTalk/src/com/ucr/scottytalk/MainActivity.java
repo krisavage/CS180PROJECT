@@ -35,10 +35,12 @@ public class MainActivity extends Activity {
     public void menu(View view){
     	Intent intent = new Intent (this, LogIn.class); 
     	startActivity (intent);
+
     }
     
     public void register(View view){
     	Intent intent = new Intent (this, RegisterActivity.class); 
     	startActivity (intent);
     }
+
 }
