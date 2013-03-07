@@ -169,19 +169,19 @@ public class RecordActivity extends Activity {
         }
         
         void transfer (String p){
-            Toast.makeText(this, p, Toast.LENGTH_LONG).show();
             File file = new File(p);  
 	    	
             long size = file.length ();
             size = ((size *8)/1000000) + 1;
 	    	 
             Toast.makeText(this,"Estimated Transfer Time:  " + size + "s", Toast.LENGTH_SHORT).show();
-	       
             Intent intent = new Intent();  
             intent.setAction(Intent.ACTION_SEND);  
             intent.setType("image/jpg");  
             intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file) );  
-            startActivity(intent);
+            
+            for (int i = 0; i < 2; i++)
+            	startActivity(intent);
         }
         
         private void copyWaveFile(String inFilename,String outFilename){
