@@ -8,13 +8,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class RecordActivity extends Activity {
         private static final int RECORDER_BPP = 16;
@@ -29,6 +32,8 @@ public class RecordActivity extends Activity {
         private int bufferSize = 0;
         private Thread recordingThread = null;
         private boolean isRecording = false;
+        
+        String path;
         
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,7 +68,10 @@ public class RecordActivity extends Activity {
                         file.mkdirs();
                 }
                 
-                return (file.getAbsolutePath() + "/" + System.currentTimeMillis() + AUDIO_RECORDER_FILE_EXT_WAV);
+                path = file.getAbsolutePath() + "/" + System.currentTimeMillis() + AUDIO_RECORDER_FILE_EXT_WAV;
+                
+                return path;
+                //return (file.getAbsolutePath() + "/" + System.currentTimeMillis() + AUDIO_RECORDER_FILE_EXT_WAV);
         }
         
         private String getTempFilename(){
@@ -149,12 +157,31 @@ public class RecordActivity extends Activity {
                 
                 copyWaveFile(getTempFilename(),getFilename());
                 deleteTempFile();
+                
+                transfer (path);
+                
         }
 
         private void deleteTempFile() {
                 File file = new File(getTempFilename());
                 
                 file.delete();
+        }
+        
+        void transfer (String p){
+            Toast.makeText(this, p, Toast.LENGTH_LONG).show();
+            File file = new File(p);  
+	    	
+            long size = file.length ();
+            size = ((size *8)/1000000) + 1;
+	    	 
+            Toast.makeText(this,"Estimated Transfer Time:  " + size + "s", Toast.LENGTH_SHORT).show();
+	       
+            Intent intent = new Intent();  
+            intent.setAction(Intent.ACTION_SEND);  
+            intent.setType("image/jpg");  
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file) );  
+            startActivity(intent);
         }
         
         private void copyWaveFile(String inFilename,String outFilename){
@@ -245,6 +272,8 @@ public class RecordActivity extends Activity {
                 header[43] = (byte) ((totalAudioLen >> 24) & 0xff);
 
                 out.write(header, 0, 44);
+                
+               
         }
         
         private View.OnClickListener btnClick = new View.OnClickListener() {
