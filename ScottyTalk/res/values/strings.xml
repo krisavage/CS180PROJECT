@@ -20,5 +20,6 @@
     <string name="title_activity_record">RecordActivity</string>
     <string name="title_activity_smsspecial">SMSSPecialActivity</string>
     <string name="title_activity_vgroup">VGroupActivity</string>
+    <string name="title_activity_ccall">CCallActivity</string>
 
 </resources>

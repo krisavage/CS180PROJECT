@@ -22,6 +22,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -116,6 +118,10 @@
         <activity
             android:name="com.ucr.scottytalk.VGroupActivity"
             android:label="@string/title_activity_vgroup" >
+        </activity>
+        <activity
+            android:name="com.ucr.scottytalk.CCallActivity"
+            android:label="@string/title_activity_ccall" >
         </activity>
     </application>
 

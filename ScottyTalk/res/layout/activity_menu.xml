@@ -27,18 +27,7 @@
         android:textColor="#FFF" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="44dp"
-        android:onClick="MMS"
-        android:text="FileTransfer"
-        android:textColor="#FFF" />
-
-    <Button
-        android:id="@+id/Button01"
+        android:id="@+id/Button0132"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -77,5 +66,25 @@
           android:onClick="search"
           android:text="Search"
           android:textColor="#FFF" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/Button03"
+                android:onClick="MMS"
+                android:text="FileTransfer"
+                android:textColor="#FFF" />
+
+            <Button
+                android:id="@+id/button001"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/Button0132"
+                android:onClick="ConferenceCall"
+                android:text="Conference Call"
+                android:textColor="#FFF" />
 
 </RelativeLayout>

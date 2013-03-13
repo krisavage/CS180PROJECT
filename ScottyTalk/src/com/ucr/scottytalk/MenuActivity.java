@@ -71,4 +71,9 @@ String addOn;
     	startActivity (intent);
     }
     
+    public void ConferenceCall (View view){
+    	Intent i = new Intent (this, CCallActivity.class);
+    	startActivity (i);
+    }
+    
 }
