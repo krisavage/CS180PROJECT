@@ -29,6 +29,7 @@ public class Friends_Activity extends Activity {
 	ListView FriendsView;
 	String addOn;
 	ArrayAdapter <String> profiles;
+	String friend;
 
 	@SuppressLint("HandlerLeak")
 	protected Handler handler = new Handler() {
@@ -58,7 +59,7 @@ public class Friends_Activity extends Activity {
     		public void onItemClick(AdapterView<?> parent, View view,
     				int position, long id) {
     			
-    			String friend =  ((TextView) view).getText().toString ();
+    			friend =  ((TextView) view).getText().toString ();
     			Alert (friend);
     			
 
@@ -81,6 +82,12 @@ public class Friends_Activity extends Activity {
 			alertDialogBuilder
 		.setMessage(NF)
 		.setCancelable(false)
+		.setNeutralButton("Delete",new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog,int id) {
+			    DeleteTask updateTask = new DeleteTask();
+			    updateTask.start();
+			}
+		  })
 		.setPositiveButton("SMS",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
     			SMS (NF);
@@ -135,7 +142,38 @@ public class Friends_Activity extends Activity {
 		  }
 	  }
 	
-
+	  protected class DeleteTask extends Thread implements Runnable {
+		  public void run() {
+			  ParseQuery query = new ParseQuery ("Friends");
+			  query.whereEqualTo("User", addOn);
+			  query.getFirstInBackground(new GetCallback() {
+				  @Override
+				  public void done(ParseObject arg0, ParseException arg1) {
+					  if (arg0 == null){
+			    		    Toast.makeText(getApplicationContext(),
+			    	    			"Unable to Delete Friend", Toast.LENGTH_SHORT).show();
+					  }
+					  else {
+						@SuppressWarnings("unchecked")
+						List <String>temp = (List<String>) arg0.get ("Friends");
+						  for (int i = 0; i < temp.size (); i++){
+							  if (friend.equals(temp.get(i))){
+								  temp.remove(i);
+								  arg0.put ("Friends", temp);
+								  arg0.saveInBackground ();
+								  Toast.makeText(getApplicationContext(),
+										  "Successfully deleted " + friend, Toast.LENGTH_SHORT).show();
+								  	profiles.clear ();
+								    UpdateTask updateTask = new UpdateTask();
+								    updateTask.start();
+							  }
+						  }
+					  }
+				
+				  }
+			  });
+		  }
+	  }
 }
 
 

@@ -70,14 +70,14 @@ public class Add2Group extends Activity {
 		GG.setOnClickListener(new Button.OnClickListener() {
 		    public void onClick(View v) {
 		    	
-		    	List <String> t = new ArrayList <String>();
-		    	t.add(NewMember);
-		    	final ParseObject Groups = new ParseObject ("Groups");
-		    	Groups.put("User", addOn);
-		    	Groups.put("Groups", t);
-		    	Groups.put("GroupName", group.getText().toString());
-		    	Groups.saveInBackground();
-		    	finish ();
+		    	if (group.getText().toString().equals("")){
+		    		Toast.makeText(getApplicationContext(),
+				  			"Enter a group Name", Toast.LENGTH_SHORT).show();
+		    		return;
+		    
+		    	}
+		    	groupExist check = new groupExist();
+		    	check.start();
 		    }
 		});
 		
@@ -98,6 +98,37 @@ public class Add2Group extends Activity {
 		getMenuInflater().inflate(R.menu.activity_add2_group, menu);
 		return true;
 	}
+	
+	  protected class groupExist extends Thread implements Runnable {
+		  public void run() {
+			  ParseQuery query = new ParseQuery ("Groups");
+			  query.whereEqualTo("User", addOn);
+			  query.whereEqualTo("GroupName", group.getText().toString() );
+			  query.findInBackground(new FindCallback() {
+				    public void done(List<ParseObject> arg1, ParseException e) {
+				    	if (arg1.size() == 0){
+					    	List <String> t = new ArrayList <String>();
+					    	t.add(NewMember);
+					    	final ParseObject Groups = new ParseObject ("Groups");
+					    	Groups.put("User", addOn);
+					    	Groups.put("Groups", t);
+					    	Groups.put("GroupName", group.getText().toString());
+					    	Groups.saveInBackground();
+					    	Toast.makeText(getApplicationContext(),
+						  			"Succesfully added " + NewMember + " to " + group.getText().toString() + " group",
+						  			Toast.LENGTH_SHORT).show();
+					    	finish ();
+				    	}
+				    	else {
+				    		
+				    		GROUP = group.getText().toString();
+			    			UpdateGroup updateGroup = new UpdateGroup();
+			    		    updateGroup.start();
+				    	}
+				    }
+				});
+		  }
+	  }
 
 	  protected class UpdateTask extends Thread implements Runnable {
 		  public void run() {
@@ -143,7 +174,7 @@ public class Add2Group extends Activity {
 								  	arg0.put ("Groups", temp);
 								  	arg0.saveInBackground ();
 								  	Toast.makeText(getApplicationContext(),
-								  			"Succesfully added " + NewMember + " to" + GROUP + " group", Toast.LENGTH_SHORT).show();	
+								  			"Succesfully added " + NewMember + " to " + GROUP + " group", Toast.LENGTH_SHORT).show();	
 								  	finish ();
 							  }
 				  }

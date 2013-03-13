@@ -180,7 +180,6 @@ public class RecordActivity extends Activity {
             intent.setType("image/jpg");  
             intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file) );  
             
-            for (int i = 0; i < 2; i++)
             	startActivity(intent);
         }
         

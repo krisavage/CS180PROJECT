@@ -50,7 +50,6 @@ public class MMS_Activity extends Activity {
     	    	 long size = file.length ();
     	    	 size = ((size *8)/1000000) + 1;
     	    	 
-    	    	 Toast.makeText(this,result, Toast.LENGTH_SHORT).show();
     	    	 Toast.makeText(this,"Estimated Transfer Time:  " + size + "s", Toast.LENGTH_SHORT).show();
     	       
     	    	 Intent intent = new Intent();  
