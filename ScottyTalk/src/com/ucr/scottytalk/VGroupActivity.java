@@ -119,7 +119,9 @@ public class VGroupActivity extends Activity {
 								  arg0.saveInBackground ();
 								  Toast.makeText(getApplicationContext(),
 										  "Successfully deleted " + FRIEND + " from group " + GROUPNAME, Toast.LENGTH_SHORT).show();
-								  finish ();
+								  	profiles.clear ();
+								    UpdateTask updateTask = new UpdateTask();
+								    updateTask.start();
 							  }
 					  }
 				
